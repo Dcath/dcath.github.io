@@ -1,9 +1,44 @@
+<!DOCTYPE html>
 <html>
+
+<head>
+	<title>牧场</title>
+	<link href="index.css" rel="stylesheet" type="text/css" />
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+        	<script type="text/javascript">
+            		function hide(hideString) { 
+			var taskContent = document.getElementById(hideString);
+			if(taskContent.getAttribute("hidden") == "hidden"){
+				taskContent.removeAttribute("hidden");
+			}
+			else{
+				taskContent.setAttribute("hidden","hidden"); 
+			}
+		}
+        	</script>
+</head>
+
 <body>
-
-<h1>我的第一个标题</h1>
-
-<p>我的第一个段落。</p>
-
+	<h1>牧场</h1>
+	<p>mxxm!</p>
+	<p  onclick="hide('hero')" style="cursor:pointer">英雄可不能临阵脱逃啊</p>
+	<img src="rabbit.png"  id="hero" hidden="hidden"  alt="兔兔！" />
+	<h2>随笔</h2>
+	<div id="taskDiv">
+		<h3 onclick="hide('taskContent')" id="task" style="cursor:pointer">任务</h3>
+            		<p id="taskContent" hidden="hidden">
+			1.模板右键菜单修改<br/>
+			2.自定义导出优化修改<br/>
+			3.装箱发货卡顿优化<br/>
+			4.网络订单dll<br/>
+			5.小程序配置文件<br/>
+		</p>
+        	</div>
+	<h2 hidden="hidden">冒险岛</h2>
+	<h2 hidden="hidden">无主</h2>
+	<h2 hidden="hidden">少前</h2>
+	<h2 hidden="hidden">原神</h2>
+	<h2 hidden="hidden">图</h2>
 </body>
+
 </html>
